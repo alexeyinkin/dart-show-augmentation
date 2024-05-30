@@ -1,0 +1,14 @@
+name: show_augmentation_example
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.0-152
+
+dependencies:
+  macros: ^0.1.0-main.5
+
+dev_dependencies:
+  lsp_client: ^0.1.0
+  show_augmentation: { path: .. }
+  total_lints: ^3.4.0
