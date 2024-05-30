@@ -26,7 +26,7 @@ If the IDE does not work for you, use this tool.
 
 ```yaml
 dev_dependency:
-  show_augmentation: ^0.1.0-2.dev
+  show_augmentation: ^0.1.0-3.dev
 ```
 
 4. Run `dart pub get`
