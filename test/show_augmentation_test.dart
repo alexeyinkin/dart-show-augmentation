@@ -19,11 +19,11 @@ void main() {
 
   test('Augmentation for file with macro applications', () async {
     await _pubGet();
-    final content = await _run('lib/hello_client.dart');
+    final content = await _run('lib/main.dart');
 
     expect(
       content,
-      File('test/hello_client_augmentation.dart.txt').readAsStringSync(),
+      File('test/main_augmentation.dart.txt').readAsStringSync(),
     );
   });
 }

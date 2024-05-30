@@ -1,4 +1,4 @@
-augment library 'package:show_augmentation_example/hello_client.dart';
+augment library 'package:show_augmentation_example/main.dart';
 
 import 'dart:core' as prefix0;
 
