@@ -31,7 +31,7 @@ dev_dependency:
 
 4. Run `dart pub get`
 
-5. Run in the command line:
+5. Run in terminal:
 
 ```bash
 dart run show_augmentation --file=relative/path/to/file.dart
@@ -79,7 +79,9 @@ is used for communication between an IDE and servers,
 it's standard for all languages.
 
 Viewing the augmentation in Dart works the same way.
-An IDE asks the Dart language server to show augmentation for a given file.
+An IDE asks the
+[Dart language server](https://github.com/dart-lang/sdk/blob/main/pkg/analysis_server/tool/lsp_spec/README.md)
+to show augmentation for a given file.
 It works one way, and that's why the augmentation in VSCode is read-only.
 
 This tool does the same. It launches the Dart language server locally,
