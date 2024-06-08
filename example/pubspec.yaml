@@ -9,6 +9,9 @@ dependencies:
   macros: ^0.1.0-main.5
 
 dev_dependencies:
-  lsp_client: ^0.1.0
+  lsp_client: ^0.1.1
   show_augmentation: { path: .. }
   total_lints: ^3.4.0
+
+#dependency_overrides:
+#  lsp_client: { path: ../../dart-lsp-client }

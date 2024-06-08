@@ -1,3 +1,8 @@
+## 0.1.0-7.dev
+
+* Require a fixed version of [lsp_client](lsp_client: ^0.1.1) package.
+* When called with `-v`, creates `LspClient` with `debug: true`.
+
 ## 0.1.0-6.dev
 
 * Break for a non-existent file.

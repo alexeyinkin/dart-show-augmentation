@@ -1,8 +1,8 @@
 1 augment library 'package:show_augmentation_example/main.dart';
-2 
+2⎵
 3 import 'dart:core' as prefix0;
-4 
+4⎵
 5 augment class User {
 6 void hello() {prefix0.print('Hello! I am User. I have age, name, username.');}
 7 }
-8 
+8⎵

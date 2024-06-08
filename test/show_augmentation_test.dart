@@ -46,7 +46,9 @@ void main() {
 
     expect(
       result.stdout,
-      File('test/main_augmentation_line_numbers.dart.txt').readAsStringSync(),
+      File('test/main_augmentation_line_numbers.dart.txt')
+          .readAsStringSync()
+          .replaceAll('⎵', ' '),
     );
   });
 }
