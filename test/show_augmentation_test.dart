@@ -9,53 +9,63 @@ void main() {
   });
 
   test('Empty for nonexistent file', () async {
+    const file = 'nonexistent.txt';
     for (final lineNumbers in [true, false]) {
-      final content = await _run('nonexistent.txt', lineNumbers: lineNumbers);
+      final result = await _run(
+        file,
+        lineNumbers: lineNumbers,
+        expectedExitCode: 1,
+      );
 
-      expect(content, '');
+      expect(result.stderr, contains('File not found: $file'));
     }
   });
 
   test('Empty for file without macro applications', () async {
     for (final lineNumbers in [true, false]) {
-      final content = await _run(
+      final result = await _run(
         'lib/hello_macro.dart',
         lineNumbers: lineNumbers,
       );
 
-      expect(content, '');
+      expect(result.stdout, '');
     }
   });
 
   test('Augmentation for file with macro applications', () async {
-    final content = await _run('lib/main.dart', lineNumbers: false);
+    final result = await _run('lib/main.dart', lineNumbers: false);
 
     expect(
-      content,
+      result.stdout,
       File('test/main_augmentation.dart.txt').readAsStringSync(),
     );
   });
 
   test('Augmentation for file with macro applications, line numbers', () async {
-    final content = await _run('lib/main.dart', lineNumbers: true);
+    final result = await _run('lib/main.dart', lineNumbers: true);
 
     expect(
-      content,
+      result.stdout,
       File('test/main_augmentation_line_numbers.dart.txt').readAsStringSync(),
     );
   });
 }
 
-Future<String> _run(String filename, {required bool lineNumbers}) async {
+Future<ProcessResult> _run(
+  String filename, {
+  required bool lineNumbers,
+  int expectedExitCode = 0,
+}) async {
   final result = await dartRun(
     [
       'show_augmentation',
       '--file=$filename',
       if (lineNumbers) '--line-numbers',
     ],
+    expectedExitCode: expectedExitCode,
     experiments: ['macros'],
     workingDirectory: Directory.current.path + '/example',
   );
 
-  return result.stdout;
+  return result;
 }

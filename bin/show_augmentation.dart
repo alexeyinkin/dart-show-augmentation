@@ -14,6 +14,12 @@ Future<void> main(List<String> argv) async {
   final pwd = Directory.current.path;
   final args = _parseArgs(argv);
 
+  final file = File(args.path);
+  if (!file.existsSync()) {
+    stderr.writeln('File not found: ${args.path}');
+    exit(1);
+  }
+
   final rawClient = LspRawClient();
 
   if (args.verbose) rawClient.addListener(LspRawPrintListener());

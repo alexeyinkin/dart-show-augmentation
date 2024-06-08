@@ -1,3 +1,7 @@
+## 0.1.0-6.dev
+
+* Break for a non-existent file.
+
 ## 0.1.0-5.dev
 
 * Show line numbers.
