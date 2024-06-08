@@ -40,6 +40,15 @@ dart run show_augmentation --file=relative/path/to/file.dart
 It will print the augmentation for the file if it has macro applications.
 It will print nothing otherwise.
 
+Full usage:
+
+```none
+Usage: dart run show_augmentation --file=relative/path/to/file.dart [--line-numbers] [-v]
+    --file=<FILE> (mandatory)    The file to show augmentation for, relative to the current directory.
+    --help                       Show this help message.
+    --line-numbers               Show line numbers.
+-v, --verbose                    Show debug output.
+```
 
 ## Example
 

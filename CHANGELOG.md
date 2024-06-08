@@ -1,3 +1,8 @@
+## 0.1.0-5.dev
+
+* Show line numbers.
+* Show debug output.
+
 ## 0.1.0-4.dev
 
 * Extract some helpers to [test_util](https://pub.dev/packages/test_util) package.
