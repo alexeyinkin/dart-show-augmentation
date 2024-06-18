@@ -1,6 +1,10 @@
+## 0.1.0-8.dev
+
+* Require a fixed version of [lsp_client](https://pub.dev/packages/lsp_client) package.
+
 ## 0.1.0-7.dev
 
-* Require a fixed version of [lsp_client](lsp_client: ^0.1.1) package.
+* Require a fixed version of [lsp_client](https://pub.dev/packages/lsp_client) package.
 * When called with `-v`, creates `LspClient` with `debug: true`.
 
 ## 0.1.0-6.dev
